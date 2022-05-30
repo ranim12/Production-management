@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PECACModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Gestion_OF">
+          <Key>
+            <PropertyRef Name="Gestion_OF_ID" />
+          </Key>
+          <Property Name="Gestion_OF_ID" Type="int" Nullable="false" />
+          <Property Name="Ordre_De_Fabrication" Type="varchar" MaxLength="50" />
+          <Property Name="Numero_OF" Type="varchar" MaxLength="50" />
+          <Property Name="Article" Type="varchar" MaxLength="50" />
+          <Property Name="Quantite_De_Lancement" Type="int" />
+          <Property Name="Qanututé_Realise" Type="int" />
+          <Property Name="Temps_Theorique" Type="int" />
+          <Property Name="Temps_Realise" Type="int" />
+          <Property Name="Date_Debut_OF" Type="date" />
+          <Property Name="Date_Fin_OF" Type="date" />
+        </EntityType>
+        <EntityType Name="Operatrice_tbl">
+          <Key>
+            <PropertyRef Name="Operatrices_ID" />
+          </Key>
+          <Property Name="Operatrices_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom_Prenom" Type="varchar" MaxLength="50" />
+          <Property Name="Shift" Type="varchar" MaxLength="50" />
+          <Property Name="Matricule" Type="varchar" MaxLength="50" />
+          <Property Name="Secteur" Type="varchar" MaxLength="50" />
+          <Property Name="Temps_Debut" Type="time" Precision="7" />
+          <Property Name="Temps_Fin" Type="time" Precision="7" />
+          <Property Name="Temps_Travail" Type="int" />
+          <Property Name="Nombre_De_Piece_Realise" Type="int" />
+          <Property Name="Image_op" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="PECACModel1StoreContainer">
+          <EntitySet Name="Gestion_OF" EntityType="Self.Gestion_OF" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Operatrice_tbl" EntityType="Self.Operatrice_tbl" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PECACModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Gestion_OF">
+          <Key>
+            <PropertyRef Name="Gestion_OF_ID" />
+          </Key>
+          <Property Name="Gestion_OF_ID" Type="Int32" Nullable="false" />
+          <Property Name="Ordre_De_Fabrication" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Numero_OF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Article" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Quantite_De_Lancement" Type="Int32" />
+          <Property Name="Qanututé_Realise" Type="Int32" />
+          <Property Name="Temps_Theorique" Type="Int32" />
+          <Property Name="Temps_Realise" Type="Int32" />
+          <Property Name="Date_Debut_OF" Type="DateTime" Precision="0" />
+          <Property Name="Date_Fin_OF" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Operatrice_tbl">
+          <Key>
+            <PropertyRef Name="Operatrices_ID" />
+          </Key>
+          <Property Name="Operatrices_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom_Prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Shift" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Matricule" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Secteur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Temps_Debut" Type="Time" Precision="7" />
+          <Property Name="Temps_Fin" Type="Time" Precision="7" />
+          <Property Name="Temps_Travail" Type="Int32" />
+          <Property Name="Nombre_De_Piece_Realise" Type="Int32" />
+          <Property Name="Image_op" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="PECACEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Gestion_OF" EntityType="Self.Gestion_OF" />
+          <EntitySet Name="Operatrice_tbl" EntityType="Self.Operatrice_tbl" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PECACModel1StoreContainer" CdmEntityContainer="PECACEntities1">
+          <EntitySetMapping Name="Gestion_OF">
+            <EntityTypeMapping TypeName="PECACModel1.Gestion_OF">
+              <MappingFragment StoreEntitySet="Gestion_OF">
+                <ScalarProperty Name="Gestion_OF_ID" ColumnName="Gestion_OF_ID" />
+                <ScalarProperty Name="Ordre_De_Fabrication" ColumnName="Ordre_De_Fabrication" />
+                <ScalarProperty Name="Numero_OF" ColumnName="Numero_OF" />
+                <ScalarProperty Name="Article" ColumnName="Article" />
+                <ScalarProperty Name="Quantite_De_Lancement" ColumnName="Quantite_De_Lancement" />
+                <ScalarProperty Name="Qanututé_Realise" ColumnName="Qanututé_Realise" />
+                <ScalarProperty Name="Temps_Theorique" ColumnName="Temps_Theorique" />
+                <ScalarProperty Name="Temps_Realise" ColumnName="Temps_Realise" />
+                <ScalarProperty Name="Date_Debut_OF" ColumnName="Date_Debut_OF" />
+                <ScalarProperty Name="Date_Fin_OF" ColumnName="Date_Fin_OF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Operatrice_tbl">
+            <EntityTypeMapping TypeName="PECACModel1.Operatrice_tbl">
+              <MappingFragment StoreEntitySet="Operatrice_tbl">
+                <ScalarProperty Name="Operatrices_ID" ColumnName="Operatrices_ID" />
+                <ScalarProperty Name="Nom_Prenom" ColumnName="Nom_Prenom" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="Matricule" ColumnName="Matricule" />
+                <ScalarProperty Name="Secteur" ColumnName="Secteur" />
+                <ScalarProperty Name="Temps_Debut" ColumnName="Temps_Debut" />
+                <ScalarProperty Name="Temps_Fin" ColumnName="Temps_Fin" />
+                <ScalarProperty Name="Temps_Travail" ColumnName="Temps_Travail" />
+                <ScalarProperty Name="Nombre_De_Piece_Realise" ColumnName="Nombre_De_Piece_Realise" />
+                <ScalarProperty Name="Image_op" ColumnName="Image_op" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MyDataSet" targetNamespace="http://tempuri.org/MyDataSet.xsd" xmlns:mstns="http://tempuri.org/MyDataSet.xsd" xmlns="http://tempuri.org/MyDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PECACConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PECACConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PECACConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MyDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MyDataSet" msprop:Generator_UserDSName="MyDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Operatrice_tbl" msprop:Generator_TableClassName="Operatrice_tblDataTable" msprop:Generator_TableVarName="tableOperatrice_tbl" msprop:Generator_TablePropName="Operatrice_tbl" msprop:Generator_RowDeletingName="Operatrice_tblRowDeleting" msprop:Generator_RowChangingName="Operatrice_tblRowChanging" msprop:Generator_RowEvHandlerName="Operatrice_tblRowChangeEventHandler" msprop:Generator_RowDeletedName="Operatrice_tblRowDeleted" msprop:Generator_UserTableName="Operatrice_tbl" msprop:Generator_RowChangedName="Operatrice_tblRowChanged" msprop:Generator_RowEvArgName="Operatrice_tblRowChangeEvent" msprop:Generator_RowClassName="Operatrice_tblRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Operatrices_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOperatrices_ID" msprop:Generator_ColumnPropNameInRow="Operatrices_ID" msprop:Generator_ColumnPropNameInTable="Operatrices_IDColumn" msprop:Generator_UserColumnName="Operatrices_ID" type="xs:int" />
+              <xs:element name="Nom_Prenom" msprop:Generator_ColumnVarNameInTable="columnNom_Prenom" msprop:Generator_ColumnPropNameInRow="Nom_Prenom" msprop:Generator_ColumnPropNameInTable="Nom_PrenomColumn" msprop:Generator_UserColumnName="Nom_Prenom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shift" msprop:Generator_ColumnVarNameInTable="columnShift" msprop:Generator_ColumnPropNameInRow="Shift" msprop:Generator_ColumnPropNameInTable="ShiftColumn" msprop:Generator_UserColumnName="Shift" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Matricule" msprop:Generator_ColumnVarNameInTable="columnMatricule" msprop:Generator_ColumnPropNameInRow="Matricule" msprop:Generator_ColumnPropNameInTable="MatriculeColumn" msprop:Generator_UserColumnName="Matricule" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Secteur" msprop:Generator_ColumnVarNameInTable="columnSecteur" msprop:Generator_ColumnPropNameInRow="Secteur" msprop:Generator_ColumnPropNameInTable="SecteurColumn" msprop:Generator_UserColumnName="Secteur" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Temps_Debut" msprop:Generator_ColumnVarNameInTable="columnTemps_Debut" msprop:Generator_ColumnPropNameInRow="Temps_Debut" msprop:Generator_ColumnPropNameInTable="Temps_DebutColumn" msprop:Generator_UserColumnName="Temps_Debut" type="xs:duration" minOccurs="0" />
+              <xs:element name="Temps_Fin" msprop:Generator_ColumnVarNameInTable="columnTemps_Fin" msprop:Generator_ColumnPropNameInRow="Temps_Fin" msprop:Generator_ColumnPropNameInTable="Temps_FinColumn" msprop:Generator_UserColumnName="Temps_Fin" type="xs:duration" minOccurs="0" />
+              <xs:element name="Temps_Travail" msprop:Generator_ColumnVarNameInTable="columnTemps_Travail" msprop:Generator_ColumnPropNameInRow="Temps_Travail" msprop:Generator_ColumnPropNameInTable="Temps_TravailColumn" msprop:Generator_UserColumnName="Temps_Travail" type="xs:int" minOccurs="0" />
+              <xs:element name="Nombre_De_Piece_Realise" msprop:Generator_ColumnVarNameInTable="columnNombre_De_Piece_Realise" msprop:Generator_ColumnPropNameInRow="Nombre_De_Piece_Realise" msprop:Generator_ColumnPropNameInTable="Nombre_De_Piece_RealiseColumn" msprop:Generator_UserColumnName="Nombre_De_Piece_Realise" type="xs:int" minOccurs="0" />
+              <xs:element name="Image_op" msprop:Generator_ColumnVarNameInTable="columnImage_op" msprop:Generator_ColumnPropNameInRow="Image_op" msprop:Generator_ColumnPropNameInTable="Image_opColumn" msprop:Generator_UserColumnName="Image_op" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Gestion_OF" msprop:Generator_TableClassName="Gestion_OFDataTable" msprop:Generator_TableVarName="tableGestion_OF" msprop:Generator_TablePropName="Gestion_OF" msprop:Generator_RowDeletingName="Gestion_OFRowDeleting" msprop:Generator_RowChangingName="Gestion_OFRowChanging" msprop:Generator_RowEvHandlerName="Gestion_OFRowChangeEventHandler" msprop:Generator_RowDeletedName="Gestion_OFRowDeleted" msprop:Generator_UserTableName="Gestion_OF" msprop:Generator_RowChangedName="Gestion_OFRowChanged" msprop:Generator_RowEvArgName="Gestion_OFRowChangeEvent" msprop:Generator_RowClassName="Gestion_OFRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Gestion_OF_ID" msprop:Generator_ColumnVarNameInTable="columnGestion_OF_ID" msprop:Generator_ColumnPropNameInRow="Gestion_OF_ID" msprop:Generator_ColumnPropNameInTable="Gestion_OF_IDColumn" msprop:Generator_UserColumnName="Gestion_OF_ID" type="xs:int" />
+              <xs:element name="Ordre_De_Fabrication" msprop:Generator_ColumnVarNameInTable="columnOrdre_De_Fabrication" msprop:Generator_ColumnPropNameInRow="Ordre_De_Fabrication" msprop:Generator_ColumnPropNameInTable="Ordre_De_FabricationColumn" msprop:Generator_UserColumnName="Ordre_De_Fabrication" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numero_OF" msprop:Generator_ColumnVarNameInTable="columnNumero_OF" msprop:Generator_ColumnPropNameInRow="Numero_OF" msprop:Generator_ColumnPropNameInTable="Numero_OFColumn" msprop:Generator_UserColumnName="Numero_OF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Article" msprop:Generator_ColumnVarNameInTable="columnArticle" msprop:Generator_ColumnPropNameInRow="Article" msprop:Generator_ColumnPropNameInTable="ArticleColumn" msprop:Generator_UserColumnName="Article" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantite_De_Lancement" msprop:Generator_ColumnVarNameInTable="columnQuantite_De_Lancement" msprop:Generator_ColumnPropNameInRow="Quantite_De_Lancement" msprop:Generator_ColumnPropNameInTable="Quantite_De_LancementColumn" msprop:Generator_UserColumnName="Quantite_De_Lancement" type="xs:int" minOccurs="0" />
+              <xs:element name="Qanututé_Realise" msprop:Generator_ColumnVarNameInTable="columnQanututé_Realise" msprop:Generator_ColumnPropNameInRow="Qanututé_Realise" msprop:Generator_ColumnPropNameInTable="Qanututé_RealiseColumn" msprop:Generator_UserColumnName="Qanututé_Realise" type="xs:int" minOccurs="0" />
+              <xs:element name="Temps_Theorique" msprop:Generator_ColumnVarNameInTable="columnTemps_Theorique" msprop:Generator_ColumnPropNameInRow="Temps_Theorique" msprop:Generator_ColumnPropNameInTable="Temps_TheoriqueColumn" msprop:Generator_UserColumnName="Temps_Theorique" type="xs:int" minOccurs="0" />
+              <xs:element name="Temps_Realise" msprop:Generator_ColumnVarNameInTable="columnTemps_Realise" msprop:Generator_ColumnPropNameInRow="Temps_Realise" msprop:Generator_ColumnPropNameInTable="Temps_RealiseColumn" msprop:Generator_UserColumnName="Temps_Realise" type="xs:int" minOccurs="0" />
+              <xs:element name="Date_Debut_OF" msprop:Generator_ColumnVarNameInTable="columnDate_Debut_OF" msprop:Generator_ColumnPropNameInRow="Date_Debut_OF" msprop:Generator_ColumnPropNameInTable="Date_Debut_OFColumn" msprop:Generator_UserColumnName="Date_Debut_OF" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Date_Fin_OF" msprop:Generator_ColumnVarNameInTable="columnDate_Fin_OF" msprop:Generator_ColumnPropNameInRow="Date_Fin_OF" msprop:Generator_ColumnPropNameInTable="Date_Fin_OFColumn" msprop:Generator_UserColumnName="Date_Fin_OF" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Operatrice_tbl" />
+      <xs:field xpath="mstns:Operatrices_ID" />
+    </xs:unique>
+    <xs:unique name="Gestion_OF_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Gestion_OF" />
+      <xs:field xpath="mstns:Gestion_OF_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
